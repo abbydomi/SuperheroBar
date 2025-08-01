@@ -11,6 +11,8 @@ import Foundation
 class SuperheroViewModel: ObservableObject {
     @Published var superhero: Superhero?
     @Published var isLoading = false
+    @Published var isError = false
+    @Published var error = ""
     private var currentId = Endpoint.HarleyQuinn
     let useCase: SuperheroUseCase
 
@@ -25,6 +27,7 @@ class SuperheroViewModel: ObservableObject {
     }
 
     func getCharacter(dir: Direction = .none) {
+        let prevId = currentId
         setLoading(to: true)
         switch dir {
         case .next: currentId += 1
@@ -36,8 +39,7 @@ class SuperheroViewModel: ObservableObject {
                 let superhero = try await useCase.getSuperhero(id: currentId)
                 updateCharacter(with: superhero)
             } catch {
-                // TODO: Handle error
-                print(error)
+                setError(message: error.localizedDescription, prevId: prevId)
             }
             setLoading(to: false)
         }
@@ -56,6 +58,15 @@ private extension SuperheroViewModel {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             isLoading = state
+        }
+    }
+
+    func setError(message: String, prevId: Int) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            isError = true
+            error = message
+            currentId = prevId
         }
     }
 }

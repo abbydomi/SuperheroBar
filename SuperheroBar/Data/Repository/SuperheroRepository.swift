@@ -17,6 +17,9 @@ struct SuperheroRepository {
     func getCharacter(id: Int) async throws -> Superhero {
         let response = try await network.fetchCharacter(id: id)
         print(response)
+        if response.response == "error" {
+            throw APIError.init(error: "Error", message: "Unknown error", statusCode: .badRequest)
+        }
         return SuperheroParser.parse(from: response)
     }
 }

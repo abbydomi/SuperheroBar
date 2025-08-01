@@ -2,7 +2,7 @@
 //  LoadingModifier.swift
 //  SuperheroBar
 //
-//  Created by Abigail Domínguez on 1/8/25.
+//  Created by Abby Domínguez on 1/8/25.
 //
 
 import SwiftUI

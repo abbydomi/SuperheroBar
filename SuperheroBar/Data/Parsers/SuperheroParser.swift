@@ -22,7 +22,7 @@ struct SuperheroParser {
         let placeOfBirth = "Place of birth: " + (bio.placeOfBirth ?? "No place of birth recorded.")
         let firstAppearance = "First appearance: " + (bio.firstAppearance ?? "No fist appearance recorded.")
         let publisher = "Published by: " + (bio.publisher ?? "Unknown.")
-        let alignment = "Alignment: " + (bio.alignment ?? "Unknown.")
+        let alignment = "Alignment: " + (bio.alignment?.uppercased() ?? "Unknown.")
 
         return fullName + "\n"
         + alisases + "\n"

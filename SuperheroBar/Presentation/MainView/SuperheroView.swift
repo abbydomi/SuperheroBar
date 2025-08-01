@@ -46,6 +46,11 @@ struct SuperheroView: View {
             vm.getCharacter()
         }
         .loading(when: $vm.isLoading)
+        .error(when: $vm.isError, message: vm.error, action: {
+            vm.isError = false
+            vm.error = ""
+            vm.getCharacter()
+        })
         .padding()
     }
 }
