@@ -13,7 +13,7 @@ struct SuperheroUseCaseImpl: SuperheroUseCase {
         self.repository = repository
     }
 
-    func getSuperhero() async throws -> Superhero {
-        try await repository.getCharacter()
+    func getSuperhero(id: Int) async throws -> Superhero {
+        try await repository.getCharacter(id: id)
     }
 }

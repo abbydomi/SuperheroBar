@@ -7,5 +7,5 @@
 
 
 enum Endpoint {
-    static let HarleyQuinn = "309"
+    static let HarleyQuinn = 309
 }

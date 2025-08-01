@@ -14,8 +14,8 @@ struct SuperheroRepository {
         self.network = network
     }
 
-    func getCharacter() async throws -> Superhero {
-        let response = try await network.fetchCharacter(id: 307)
+    func getCharacter(id: Int) async throws -> Superhero {
+        let response = try await network.fetchCharacter(id: id)
         print(response)
         return SuperheroParser.parse(from: response)
     }

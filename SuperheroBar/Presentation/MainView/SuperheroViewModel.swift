@@ -11,17 +11,29 @@ import Foundation
 class SuperheroViewModel: ObservableObject {
     @Published var superhero: Superhero?
     @Published var isLoading = false
+    private var currentId = Endpoint.HarleyQuinn
     let useCase: SuperheroUseCase
+
+    enum Direction {
+        case next
+        case previous
+        case none
+    }
 
     init(useCase: SuperheroUseCase) {
         self.useCase = useCase
     }
 
-    func getCharacterName() {
+    func getCharacter(dir: Direction = .none) {
+        setLoading(to: true)
+        switch dir {
+        case .next: currentId += 1
+        case .none: break
+        case .previous: currentId -= 1
+        }
         Task {
-            setLoading(to: true)
             do {
-                let superhero = try await useCase.getSuperhero()
+                let superhero = try await useCase.getSuperhero(id: currentId)
                 updateCharacter(with: superhero)
             } catch {
                 // TODO: Handle error

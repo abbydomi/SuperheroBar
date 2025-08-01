@@ -13,7 +13,8 @@ struct SuperheroDatasource {
     }
 
     func fetchCharacter(id: Int) async throws -> SuperheroResponse {
-        let request = APIRequest(method: .GET, baseUrl: APIConstants.baseURL, endpoint: Endpoint.HarleyQuinn)
+        print(id)
+        let request = APIRequest(method: .GET, baseUrl: APIConstants.baseURL, endpoint: String(id))
         return try await apiClient.request(request)
     }
 }

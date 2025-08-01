@@ -34,15 +34,17 @@ struct SuperheroView: View {
                 Spacer()
                 HStack {
                     Button("Fetch previous") {
-                        vm.getCharacterName()
+                        vm.getCharacter(dir: .previous)
                     }
                     Button("Fetch next") {
-                        vm.getCharacterName()
+                        vm.getCharacter(dir: .next)
                     }
                 }
             }
         }
-        .onAppear(perform: vm.getCharacterName)
+        .onAppear {
+            vm.getCharacter()
+        }
         .loading(when: $vm.isLoading)
         .padding()
     }

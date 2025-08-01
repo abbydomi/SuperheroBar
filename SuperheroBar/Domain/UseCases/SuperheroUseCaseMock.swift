@@ -8,7 +8,7 @@
 import Foundation
 
 struct SuperheroUseCaseMock: SuperheroUseCase {
-    func getSuperhero() async throws -> Superhero {
+    func getSuperhero(id: Int) async throws -> Superhero {
         .init(
             name: "Mockman",
             biography: "The superhero from mock city",
