@@ -5,6 +5,8 @@
 //  Created by Abby Dominguez on 1/8/25.
 //
 
+import Foundation
+
 struct SuperheroRepository {
     private let network: SuperheroDatasource
 
@@ -15,6 +17,6 @@ struct SuperheroRepository {
     func getCharacter() async throws -> Superhero {
         let response = try await network.fetchCharacter(id: 307)
         print(response)
-        return .init(name: response.name ?? "")
+        return SuperheroParser.parse(from: response)
     }
 }

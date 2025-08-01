@@ -12,7 +12,7 @@ struct SuperheroDatasource {
         self.apiClient = apiClient
     }
 
-    func fetchCharacter(id: Int) async throws -> CharacterResponse {
+    func fetchCharacter(id: Int) async throws -> SuperheroResponse {
         let request = APIRequest(method: .GET, baseUrl: APIConstants.baseURL, endpoint: Endpoint.HarleyQuinn)
         return try await apiClient.request(request)
     }

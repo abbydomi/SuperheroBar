@@ -6,9 +6,12 @@
 //
 
 import Combine
+import Foundation
 
 class SuperheroViewModel: ObservableObject {
     @Published var name: String = ""
+    @Published var image: URL?
+    @Published var superhero: Superhero?
     let useCase: SuperheroUseCase
 
     init(useCase: SuperheroUseCase) {
@@ -18,11 +21,21 @@ class SuperheroViewModel: ObservableObject {
     func getCharacterName() {
         Task {
             do {
-                name = try await useCase.getSuperhero().name
+                let superhero = try await useCase.getSuperhero()
+                updateCharacter(with: superhero)
             } catch {
                 // TODO: Handle error
                 print(error)
             }
+        }
+    }
+
+    func updateCharacter(with model: Superhero) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            name = model.name
+            image = model.image
+            superhero = model
         }
     }
 }

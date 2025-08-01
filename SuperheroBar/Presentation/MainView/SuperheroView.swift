@@ -15,13 +15,34 @@ struct SuperheroView: View {
     }
 
     var body: some View {
-        VStack {
-            Image(systemName: "person.fill")
-            Text(vm.name)
-            Button("Fetch Harley") {
-                vm.getCharacterName()
+        ZStack {
+            AsyncImage(url: vm.image) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .opacity(0.2)
+            } placeholder:  {
+                if vm.image != nil {
+                    ProgressView()
+                }
+            }
+            VStack {
+                Text(vm.name)
+                    .font(.title)
+                Text(vm.superhero?.biography ?? "")
+                    .font(.body)
+                Spacer()
+                HStack {
+                    Button("Fetch previous") {
+                        vm.getCharacterName()
+                    }
+                    Button("Fetch next") {
+                        vm.getCharacterName()
+                    }
+                }
             }
         }
+        .onAppear(perform: vm.getCharacterName)
         .padding()
     }
 }
