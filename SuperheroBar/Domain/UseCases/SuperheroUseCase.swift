@@ -1,6 +1,6 @@
 //
 //  SuperheroUseCase.swift
-//  apptest
+//  SuperheroBar
 //
 //  Created by Abby Dominguez on 1/8/25.
 //

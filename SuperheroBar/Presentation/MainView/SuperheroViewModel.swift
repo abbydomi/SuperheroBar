@@ -9,9 +9,8 @@ import Combine
 import Foundation
 
 class SuperheroViewModel: ObservableObject {
-    @Published var name: String = ""
-    @Published var image: URL?
     @Published var superhero: Superhero?
+    @Published var isLoading = false
     let useCase: SuperheroUseCase
 
     init(useCase: SuperheroUseCase) {
@@ -20,6 +19,7 @@ class SuperheroViewModel: ObservableObject {
 
     func getCharacterName() {
         Task {
+            setLoading(to: true)
             do {
                 let superhero = try await useCase.getSuperhero()
                 updateCharacter(with: superhero)
@@ -27,15 +27,23 @@ class SuperheroViewModel: ObservableObject {
                 // TODO: Handle error
                 print(error)
             }
+            setLoading(to: false)
         }
     }
-
+}
+// MARK: Private methods
+private extension SuperheroViewModel {
     func updateCharacter(with model: Superhero) {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
-            name = model.name
-            image = model.image
             superhero = model
+        }
+    }
+
+    func setLoading(to state: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            isLoading = state
         }
     }
 }

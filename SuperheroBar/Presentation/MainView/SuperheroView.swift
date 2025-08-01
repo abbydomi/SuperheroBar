@@ -16,18 +16,18 @@ struct SuperheroView: View {
 
     var body: some View {
         ZStack {
-            AsyncImage(url: vm.image) { image in
+            AsyncImage(url: vm.superhero?.image) { image in
                 image
                     .resizable()
                     .scaledToFit()
                     .opacity(0.2)
             } placeholder:  {
-                if vm.image != nil {
+                if vm.superhero?.image != nil {
                     ProgressView()
                 }
             }
             VStack {
-                Text(vm.name)
+                Text(vm.superhero?.name ?? "")
                     .font(.title)
                 Text(vm.superhero?.biography ?? "")
                     .font(.body)
@@ -43,6 +43,7 @@ struct SuperheroView: View {
             }
         }
         .onAppear(perform: vm.getCharacterName)
+        .loading(when: $vm.isLoading)
         .padding()
     }
 }

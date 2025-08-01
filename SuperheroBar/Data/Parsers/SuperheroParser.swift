@@ -28,7 +28,6 @@ struct SuperheroParser {
         + alisases + "\n"
         + placeOfBirth + "\n"
         + firstAppearance + "\n"
-        + firstAppearance + "\n"
         + publisher + "\n"
         + alignment
     }

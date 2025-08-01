@@ -1,6 +1,6 @@
 //
 //  APIError.swift
-//  Data
+//  SuperheroBar
 //
 //  Created by Abby Dominguez on 25/11/24.
 //
