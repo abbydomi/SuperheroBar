@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ServiceManagement
 
 @main
 struct SuperheroBarApp: App {
@@ -21,10 +22,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static private(set) var instance: AppDelegate!
     lazy var statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let menu = ApplicationMenu()
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         AppDelegate.instance = self
         statusBarItem.button?.image = NSImage(resource: .barIcon)
         statusBarItem.button?.imagePosition = .imageLeading
         statusBarItem.menu = menu.createMenu()
+        enableLoginLauncher(true)
+    }
+
+    func enableLoginLauncher(_ enabled: Bool) {
+        let launcherAppId = "com.abbydomi.SuperheroLoginLauncher"
+        if !SMLoginItemSetEnabled(launcherAppId as CFString, enabled) {
+            print("Failed to toggle login item.")
+        }
     }
 }

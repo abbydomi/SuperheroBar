@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		280C60842E3D15B100C7A0A7 /* SuperheroLoginLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 280C60742E3D158100C7A0A7 /* SuperheroLoginLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		280C60592E3D0FD400C7A0A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -16,9 +20,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		280C60832E3D159B00C7A0A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				280C60842E3D15B100C7A0A7 /* SuperheroLoginLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		280C5FAA2E3CF2A700C7A0A7 /* SuperheroBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280C60552E3D0FD400C7A0A7 /* SuperheroBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperheroBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		280C60742E3D158100C7A0A7 /* SuperheroLoginLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroLoginLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +48,11 @@
 		280C60562E3D0FD400C7A0A7 /* SuperheroBarTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SuperheroBarTests;
+			sourceTree = "<group>";
+		};
+		280C60752E3D158100C7A0A7 /* SuperheroLoginLauncher */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SuperheroLoginLauncher;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -49,6 +72,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		280C60712E3D158100C7A0A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +87,7 @@
 			children = (
 				280C5FAC2E3CF2A700C7A0A7 /* SuperheroBar */,
 				280C60562E3D0FD400C7A0A7 /* SuperheroBarTests */,
+				280C60752E3D158100C7A0A7 /* SuperheroLoginLauncher */,
 				280C5FAB2E3CF2A700C7A0A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +97,7 @@
 			children = (
 				280C5FAA2E3CF2A700C7A0A7 /* SuperheroBar.app */,
 				280C60552E3D0FD400C7A0A7 /* SuperheroBarTests.xctest */,
+				280C60742E3D158100C7A0A7 /* SuperheroLoginLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +112,7 @@
 				280C5FA62E3CF2A700C7A0A7 /* Sources */,
 				280C5FA72E3CF2A700C7A0A7 /* Frameworks */,
 				280C5FA82E3CF2A700C7A0A7 /* Resources */,
+				280C60832E3D159B00C7A0A7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -118,6 +151,28 @@
 			productReference = 280C60552E3D0FD400C7A0A7 /* SuperheroBarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		280C60732E3D158100C7A0A7 /* SuperheroLoginLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280C60802E3D158200C7A0A7 /* Build configuration list for PBXNativeTarget "SuperheroLoginLauncher" */;
+			buildPhases = (
+				280C60702E3D158100C7A0A7 /* Sources */,
+				280C60712E3D158100C7A0A7 /* Frameworks */,
+				280C60722E3D158100C7A0A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				280C60752E3D158100C7A0A7 /* SuperheroLoginLauncher */,
+			);
+			name = SuperheroLoginLauncher;
+			packageProductDependencies = (
+			);
+			productName = SuperheroLoginLauncher;
+			productReference = 280C60742E3D158100C7A0A7 /* SuperheroLoginLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -135,6 +190,9 @@
 						CreatedOnToolsVersion = 16.2;
 						LastSwiftMigration = 1620;
 						TestTargetID = 280C5FA92E3CF2A700C7A0A7;
+					};
+					280C60732E3D158100C7A0A7 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -154,6 +212,7 @@
 			targets = (
 				280C5FA92E3CF2A700C7A0A7 /* SuperheroBar */,
 				280C60542E3D0FD400C7A0A7 /* SuperheroBarTests */,
+				280C60732E3D158100C7A0A7 /* SuperheroLoginLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +232,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		280C60722E3D158100C7A0A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -184,6 +250,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		280C60512E3D0FD400C7A0A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280C60702E3D158100C7A0A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,7 +327,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -311,7 +384,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -338,6 +411,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.SuperheroBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +439,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.SuperheroBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +487,62 @@
 			};
 			name = Release;
 		};
+		280C60812E3D158200C7A0A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperheroLoginLauncher/SuperheroLoginLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SuperheroLoginLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = KB6MXUCGP3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.SuperheroLoginLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		280C60822E3D158200C7A0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperheroLoginLauncher/SuperheroLoginLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SuperheroLoginLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = KB6MXUCGP3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.SuperheroLoginLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,6 +569,15 @@
 			buildConfigurations = (
 				280C605C2E3D0FD400C7A0A7 /* Debug */,
 				280C605D2E3D0FD400C7A0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280C60802E3D158200C7A0A7 /* Build configuration list for PBXNativeTarget "SuperheroLoginLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280C60812E3D158200C7A0A7 /* Debug */,
+				280C60822E3D158200C7A0A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
