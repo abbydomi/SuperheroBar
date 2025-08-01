@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		280C60592E3D0FD400C7A0A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 280C5FA22E3CF2A700C7A0A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280C5FA92E3CF2A700C7A0A7;
+			remoteInfo = SuperheroBar;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		280C5FAA2E3CF2A700C7A0A7 /* SuperheroBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		280C60552E3D0FD400C7A0A7 /* SuperheroBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperheroBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = SuperheroBar;
 			sourceTree = "<group>";
 		};
+		280C60562E3D0FD400C7A0A7 /* SuperheroBarTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SuperheroBarTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		280C5FA72E3CF2A700C7A0A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280C60522E3D0FD400C7A0A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				280C5FAC2E3CF2A700C7A0A7 /* SuperheroBar */,
+				280C60562E3D0FD400C7A0A7 /* SuperheroBarTests */,
 				280C5FAB2E3CF2A700C7A0A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				280C5FAA2E3CF2A700C7A0A7 /* SuperheroBar.app */,
+				280C60552E3D0FD400C7A0A7 /* SuperheroBarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 280C5FAA2E3CF2A700C7A0A7 /* SuperheroBar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		280C60542E3D0FD400C7A0A7 /* SuperheroBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280C605B2E3D0FD400C7A0A7 /* Build configuration list for PBXNativeTarget "SuperheroBarTests" */;
+			buildPhases = (
+				280C60512E3D0FD400C7A0A7 /* Sources */,
+				280C60522E3D0FD400C7A0A7 /* Frameworks */,
+				280C60532E3D0FD400C7A0A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280C605A2E3D0FD400C7A0A7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				280C60562E3D0FD400C7A0A7 /* SuperheroBarTests */,
+			);
+			name = SuperheroBarTests;
+			packageProductDependencies = (
+			);
+			productName = SuperheroBarTests;
+			productReference = 280C60552E3D0FD400C7A0A7 /* SuperheroBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,11 @@
 				TargetAttributes = {
 					280C5FA92E3CF2A700C7A0A7 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					280C60542E3D0FD400C7A0A7 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+						TestTargetID = 280C5FA92E3CF2A700C7A0A7;
 					};
 				};
 			};
@@ -100,12 +153,20 @@
 			projectRoot = "";
 			targets = (
 				280C5FA92E3CF2A700C7A0A7 /* SuperheroBar */,
+				280C60542E3D0FD400C7A0A7 /* SuperheroBarTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		280C5FA82E3CF2A700C7A0A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280C60532E3D0FD400C7A0A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +183,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		280C60512E3D0FD400C7A0A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280C605A2E3D0FD400C7A0A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280C5FA92E3CF2A700C7A0A7 /* SuperheroBar */;
+			targetProxy = 280C60592E3D0FD400C7A0A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		280C5FB72E3CF2A800C7A0A7 /* Debug */ = {
@@ -297,6 +373,45 @@
 			};
 			name = Release;
 		};
+		280C605C2E3D0FD400C7A0A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KB6MXUCGP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.SuperheroBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperheroBarTests/SuperheroBarTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperheroBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperheroBar";
+			};
+			name = Debug;
+		};
+		280C605D2E3D0FD400C7A0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KB6MXUCGP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.SuperheroBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperheroBarTests/SuperheroBarTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperheroBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperheroBar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -314,6 +429,15 @@
 			buildConfigurations = (
 				280C5FBA2E3CF2A800C7A0A7 /* Debug */,
 				280C5FBB2E3CF2A800C7A0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280C605B2E3D0FD400C7A0A7 /* Build configuration list for PBXNativeTarget "SuperheroBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280C605C2E3D0FD400C7A0A7 /* Debug */,
+				280C605D2E3D0FD400C7A0A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

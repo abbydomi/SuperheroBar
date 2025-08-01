@@ -1,13 +1,12 @@
 //
-//  SuperheroRepository.swift
+//  SuperheroRepositoryImpl.swift
 //  SuperheroBar
 //
 //  Created by Abby Dominguez on 1/8/25.
 //
 
-import Foundation
 
-struct SuperheroRepository {
+struct SuperheroRepositoryImpl: SuperheroRepository {
     private let network: SuperheroDatasource
 
     init(network: SuperheroDatasource) {

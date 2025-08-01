@@ -7,6 +7,6 @@
 
 struct RepositoryFactory {
     static func superhero() -> SuperheroRepository {
-        .init(network: DatasourceFactory.superhero())
+        SuperheroRepositoryImpl(network: DatasourceFactory.superhero())
     }
 }
